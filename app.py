@@ -96,7 +96,10 @@ if uploaded_file is not None:
 
   st.divider()
 
-  kamera_fotosu = st.camera_input("📸 Plakayı Çek ve Tara")
+kamera_fotosu = st.camera_input(
+    "📸 Plakayı Çek ve Tara",
+    facing_mode="environment",  # 'environment' arka kamera demektir
+)
 
   if kamera_fotosu is not None:
     bytes_data = kamera_fotosu.getvalue()
