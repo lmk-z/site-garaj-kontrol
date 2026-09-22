@@ -105,5 +105,5 @@ if uploaded_file is not None:
     bytes_data = kamera_fotosu.getvalue()
     np_img = np.frombuffer(bytes_data, np.uint8)
     img = cv2.imdecode(np_img, cv2.IMREAD_COLOR)
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2SESSION_STATE
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     if 'tarananlar' not in st.session_state: # (kodun devamı aynı)
