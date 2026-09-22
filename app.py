@@ -96,10 +96,8 @@ if uploaded_file is not None:
 
   st.divider()
 
-  # Doğrudan arka kamerayı açan parametre (environment) eklendi
-  kamera_fotosu = st.camera_input(
-      "📸 Plakayı Çek ve Tara", facing_mode="environment"
-  )
+  # Standart ve hatasız kamera bileşeni
+  kamera_fotosu = st.camera_input("📸 Plakayı Çek ve Tara")
 
   if kamera_fotosu is not None:
     bytes_data = kamera_fotosu.getvalue()
