@@ -96,10 +96,10 @@ if uploaded_file is not None:
 
   st.divider()
 
-kamera_fotosu = st.camera_input(
-    "📸 Plakayı Çek ve Tara",
-    facing_mode="environment",  # 'environment' arka kamera demektir
-)
+  # Doğrudan arka kamerayı açan parametre (environment) eklendi
+  kamera_fotosu = st.camera_input(
+      "📸 Plakayı Çek ve Tara", facing_mode="environment"
+  )
 
   if kamera_fotosu is not None:
     bytes_data = kamera_fotosu.getvalue()
@@ -140,7 +140,7 @@ kamera_fotosu = st.camera_input(
                 " bulunamadı!"
             )
         else:
-            st.info(f"ℹ️ `{plaka}` plakası bu oturumda zaten tarandı.")
+          st.info(f"ℹ️ `{plaka}` plakası bu oturumda zaten tarandı.")
     else:
       st.warning(
           "⚠️ Net bir plaka okunamadı. Kamerayı biraz daha yaklaştırıp tekrar"
